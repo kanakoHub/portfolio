@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Myfont';
+    src: local('ROLAchan-Regular');
+}
+
+.top {
+    background-image: url(../img/top.png);
+    background-size: cover;
+}
+
+.top-title {
+    font-family: Myfont, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 48px;
+}
