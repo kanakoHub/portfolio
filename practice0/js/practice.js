@@ -39,12 +39,20 @@ $(function() {
         return false;
     });
     $('#about-btn').click(function() {
-        // $('#drawer').slideToggle(); 
+        $('body,html').animate({scrollTop: 500}, 500);
+        return false;
+    });
+    $('#item-btn').click(function() {
+        $('body,html').animate({scrollTop: 1000}, 500);
         return false;
     });
     $('#contact-btn').click(function() {
-        // $('#drawer').slideToggle(); 
+        $('body,html').animate({scrollTop: 1300}, 500);
         return false;
     });
 
+    
 });
+
+
+
