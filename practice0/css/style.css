@@ -1,0 +1,399 @@
+/*------------------------------
+all
+------------------------------*/
+
+body {
+    line-height: 1.5;
+    color: #082B48;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* aタグに全体指定のフォントカラーが効かないのはブラウザごとに予めフォントカラーを設定しているから */
+}
+
+/* div */
+.container {
+    width: 90%;
+    max-width: 960px;
+    /* max-widthを指定して画面幅が大きくなっても視線をずらすことがないようにする */
+    margin: auto;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* floatのclaerfix floatを設定した要素の親要素に指定する */
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*------------------------------
+header
+------------------------------*/
+
+header {
+    padding: 20px 0;
+}
+
+/* h1 */
+.header-title {
+    font-weight: bold;
+    font-size: 24px;
+    /* 文字サイズや太さはdiv要素では指定しない */
+}
+
+/* div */
+.header-left {
+    float: left;
+}
+
+/* div */
+.header-right {
+    float: right;
+}
+
+/* li */
+.header-nav-item {
+    float: left;
+    margin-left: 50px;
+}
+
+.header-nav-item a {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 10px;
+    line-height: 36px;
+}
+
+/*------------------------------
+top
+------------------------------*/
+
+/* section */
+.top {
+    background-image: url(../img/main-vsual-nontitle.png);
+    background-size: cover;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* p */
+.top-left {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* p */
+.top-right {
+    font-size: 18px;
+}
+
+/*------------------------------
+section共通
+------------------------------*/
+
+/* section */
+.section {
+    padding: 60px 0;
+}
+
+/* h2 */
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*------------------------------
+about
+------------------------------*/
+
+/* div */
+.about-left {
+    width: 48%;
+    float: left;
+}
+
+/* div */
+.about-right {
+    width: 48%;
+    float: right;
+}
+
+/*------------------------------
+course
+------------------------------*/
+
+/* section */
+.course {
+    background-color: lightblue;
+}
+
+/* div */
+.course-wrapper {
+    display: flex;
+    /* flexは親要素につける */
+    justify-content: space-between;
+}
+
+/* div */
+.course-wrapper-item {
+    width: 30%;
+}
+    
+/*------------------------------
+contact
+------------------------------*/
+
+/* p */
+.contact-mes {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    border-radius: 999px;
+    width: 600px;
+    padding: 15px;
+    border: 3px solid #d8d8d8;
+    display: block;
+    /* inputはインライン要素なのでブロック要素に変換して改行している */
+    margin: auto;
+    /* ブロック要素にtext-alignは効かない（中身の文字には聞く）のでmargin:autoで設定する */
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* button */
+.btn {
+    background-color: #082b48;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px 60px;
+    /* display: inline-block; */
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* button */
+.btn-reg {
+    background-color: #ec6d64;
+    display: block;
+    margin: auto;
+}
+
+/*------------------------------
+footer
+------------------------------*/
+
+footer {
+    padding: 20px 0;
+    color: #fff;
+    background-color: #082B48;
+}
+
+/* p */
+.copyright {
+    float: right;
+    font-size: 12px;
+}
+
+/*------------------------------
+js
+------------------------------*/
+
+.drawer {
+    position: fixed;
+    /* border: solid 1px; */
+    padding: 10px 30px;
+    background-color: #fff;
+}
+
+.drawer li{
+    padding: 5px 0;
+}
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.modal__bg{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.modal__content{
+    background: #fff;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+}
+
+/*------------------------------
+スマホ用の表示
+------------------------------*/
+
+/* widthの指定は未満ではなく以下 */
+@media only screen and (max-width:767px) {
+
+    /* clearfix自体を消す */
+    .clear::after {
+        content: none;
+    }
+    
+    /*==============================
+    header
+    ==============================*/
+    .header-left {
+        float: none;
+    }
+    .header-title {
+        text-align: center;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .header-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header-nav-item {
+        float: none;
+        margin-left: 0;
+    }
+
+    /*------------------------------
+    top
+    ------------------------------*/
+
+    .top {
+        padding: 120px 0;
+    }
+
+    .top-left {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .top-right {
+        font-size: 14px;
+    }
+
+    /*------------------------------
+    section共通
+    ------------------------------*/
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    /*------------------------------
+    about
+    ------------------------------*/
+
+    .about-left {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .about-right {
+        width: 100%;
+        float: none;
+    }
+
+    /*------------------------------
+    course
+    ------------------------------*/
+
+    .course {
+        background-color:lightcyan;
+    }
+
+    .course-wrapper {
+        display: block;
+    }
+
+    .course-wrapper-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /*------------------------------
+    contact
+    ------------------------------*/
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    /*------------------------------
+    footer
+    ------------------------------*/
+
+    .copyright {
+        float: none;
+        font-size: 10px;
+        text-align: center;
+    }
+
+}
