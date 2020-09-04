@@ -34,17 +34,16 @@ $(function() {
         return false;
     });
 
-    $('#drawer').slideToggle(); 
     $('#course-btn').click(function() {
-        $('#drawer').slideToggle('active'); 
+        $('#drawer').slideToggle(); 
         return false;
     });
     $('#about-btn').click(function() {
-        // $('#drawer').slideToggle('active'); 
+        // $('#drawer').slideToggle(); 
         return false;
     });
     $('#contact-btn').click(function() {
-        // $('#drawer').slideToggle('active'); 
+        // $('#drawer').slideToggle(); 
         return false;
     });
 
