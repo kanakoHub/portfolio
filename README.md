@@ -3,6 +3,6 @@
   <head>
   </head>
   <body>
-    <p>Hello world</p>
+    <p>Kanako S's Portfolio - Webデザイン、RailsとJS -</p>
   </body>
 </html>
